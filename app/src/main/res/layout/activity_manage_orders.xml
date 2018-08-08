@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/customer_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="@string/customer_name_spelling"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cans_with_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="@string/cans_with_customer"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="@string/balance"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="@string/total"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_toRightOf="@+id/linearLayout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/customer_name_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="@string/customer_name_spelling"
+                        android:textColor="@color/Black" />
+
+                    <TextView
+                        android:id="@+id/cans_with_customer_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="0"
+                        android:textColor="@color/Black" />
+
+                    <TextView
+                        android:id="@+id/balance_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="0"
+                        android:textColor="@color/Black" />
+
+                    <TextView
+                        android:id="@+id/total_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="0"
+                        android:textColor="@color/Black" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/cans_return"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/returned"
+                    android:ems="10"
+                    android:drawablePadding="7dp"
+                    android:focusable="true"
+                    android:hint="Cans Return"
+                    android:inputType="number"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/new_cans"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/products2"
+                    android:ems="10"
+                    android:drawablePadding="7dp"
+                    android:hint="New Cans Given"
+                    android:inputType="number"
+                    android:maxLength="2" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/money_recieved"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/price"
+                    android:ems="10"
+                    android:drawablePadding="7dp"
+                    android:hint="Money Recieved"
+                    android:inputType="number"
+                    android:maxLength="5" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/deposit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/advance"
+                    android:ems="10"
+                    android:hint="Deposit"
+                    android:drawablePadding="7dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/return_date"
+                        android:layout_width="420dp"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/calander"
+                        android:ems="10"
+                        android:drawablePadding="7dp"
+                        android:focusable="false"
+                        android:hint="Return Date"
+                        android:inputType="date" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <EditText
+                    android:id="@+id/invisible"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/date_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:src="@drawable/calendar_icon" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_send_sms"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/button_actionbar_style"
+                android:padding="12dp"
+                android:text="Save/Send SMS"
+                android:textColor="@color/ButtonText" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_close_account"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_actionbar_style"
+                android:padding="12dp"
+                android:text="Close Account"
+                android:textColor="@color/ButtonText" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

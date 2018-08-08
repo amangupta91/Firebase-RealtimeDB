@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/editText_date"
+                        android:layout_width="420dp"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/calander"
+                        android:ems="10"
+                        android:hint="Date"
+                        android:inputType="date" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/date_icon"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/calendar_icon" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_generate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:background="@drawable/button_actionbar_style"
+                android:text="Generate"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/ButtonText"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_export"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:background="@drawable/button_actionbar_style"
+                android:text="Export"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/ButtonText"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_export_mail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:background="@drawable/button_actionbar_style"
+                android:text="Export and Mail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/ButtonText"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

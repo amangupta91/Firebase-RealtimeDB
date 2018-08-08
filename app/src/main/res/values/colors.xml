@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#005F9D</color>
+    <color name="colorPrimaryDark">#0F4F93</color>
+    <color name="colorAccent">#3F51B5</color>
+    <color name="background_color">#eaeaea</color>
+    <color name="action_bar_color">#33b5e5</color>
+    <color name="listHeaderColor">#666666</color>
+    <color name="FirstListColor">#9999FF</color>
+    <color name="SecondListColor">#CCCCFF</color>
+    <color name="list_Select_Color">#5B63DB</color>
+    <color name="text_color">#EBE7AB</color>
+    <color name="text_color1">#111111</color>
+    <color name="image_border_start">#40990000</color>
+    <color name="image_border_end">#FF660000</color>
+    <color name="image_border_center">#FFFF3333</color>
+    <color name="default_back_color">#B40431</color>
+    <color name="ButtonText">#ffffff</color>
+    <color name="light_font">#FBFBFB</color>
+    <color name="grey_font">#ff9e9e9e</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="text_shadow_white">#FFFFFF</color>
+    <color name="Black">#000000</color>
+    <color name="Blue">#0000ff</color>
+    <color name="BlackBlue">#2A2C57</color>
+    <color name="graph_background">#EAEAEA</color>
+    <color name="barlinecolor">#4388CC</color>
+    <color name="iconBackground">#FFFCCF</color>
+    <color name="editext_background">#00BFFF</color>
+    <color name="editext_boarder">#EBE7AB</color>
+    <color name="customActionBar_LightBlueColor">#00B6E1</color>
+    <color name="fontColor">#4A5E9A</color>
+    <color name="expandedListviewBackgroudColor">#C3C6ED</color>
+    <color name="expandedDividerColor">#C3C6ED</color>
+    <color name="red">#FF0000</color>
+    <color name="reportListHeader">#666666</color>
+    <color name="login_btn_color">#4388CC</color>
+    <color name="filter_label_normal">#8A8889</color>
+    <color name="filter_label_selected">#221F20</color>
+
+    <color name="blue_text">#4A5E9A</color>
+    <color name="alertcolor">#F5F5F5</color>
+    <color name="alertButtoncolor">#33B5E5</color>
+
+
+    <!-- Color defined for license Toast -->
+    <color name="red_ToastColor">#C5405B</color>
+    <color name="blue_ToastColour">#1A227B</color>
+</resources>

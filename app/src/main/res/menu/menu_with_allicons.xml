@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:icon="@drawable/add"
+        android:id="@+id/item_add"
+        android:visible="true"
+        app:showAsAction="always"
+        android:title="Add Customer" />-->
+    <item
+        android:icon="@drawable/edit"
+        android:id="@+id/item_edit"
+        android:visible="true"
+        app:showAsAction="always"
+        android:title="Edit Customer" />
+    <item
+        android:icon="@drawable/delete"
+        android:id="@+id/item_delete"
+        android:visible="true"
+        app:showAsAction="always"
+        android:title="Delete Customer" />
+    <item
+        android:icon="@drawable/back"
+        android:id="@+id/item_back"
+        app:showAsAction="always"
+        android:visible="true"
+        android:title="Back" />
+
+</menu>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="watersupplier.main">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- needed for USB host (for communication) -->
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <compatible-screens>
+
+        <!-- list the screens you support here -->
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="xlarge" />
+    </compatible-screens>
+
+    <application
+        android:name=".Firsebase_Operations.WaterSupplier"
+        android:allowBackup="true"
+        android:icon="@drawable/product_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <service
+            android:name=".Notifications.FireBaseService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".Notifications.MyFCMService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Generic.Login_Activity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Product.Product_Setup"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".Main.First_Menu"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".Generic.SignUp_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".Customer.Customer_List_Activity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customer.Add_Edit_Customer_Activity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Orders.Order_Search_ListActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait">
+
+            <!-- to identify this activity as "searchable" -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_appid" />
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider381727248974878"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
+        <activity
+            android:name=".Orders.Manage_Orders_Activity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Orders.Close_Account_Activity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Orders.Add_Walkin_Customer_Activity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Configuration.Configuration_Main_Activity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Reports_Main_Activity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Cans_in_Market_SearchActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Cans_in_Market_ListActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Cans_ExpectedToday_SearchActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Cans_ExpectedToday_ListActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Customer_Account_SearchActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Customer_Account_ListActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Sales_SearchActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Sales_ListActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Orders.Volly_Response_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Generic.Passcode_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Generic.Passcode_SignUp_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NewThings.NewThingsButtonsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Configuration.Android_Plot_Activity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".NewThings.InstagramFilters.FiltersMainActivity"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

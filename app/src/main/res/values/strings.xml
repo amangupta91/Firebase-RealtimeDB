@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Water Supplier</string>
+    <string name="app_name2">Accounts</string>
+
+    <!--page names-->
+    <string name="product_page">Product</string>
+    <string name="customer_page">Customer</string>
+    <string name="orders_page">Orders</string>
+    <string name="configuration_page">Configuration</string>
+    <string name="report_page">Report</string>
+    <string name="walkin_customer">Add Walk-In Customer</string>
+    <string name="walkin_customer_btn">Walk-in Customer</string>
+    <string name="add_customer">Add Customer</string>
+    <string name="edit_customer">Edit Customer</string>
+    <string name="backup_page">Backup</string>
+    <string name="restore_page">Restore</string>
+    <string name="archive_page">Archive</string>
+    <string name="applicationSetting_page">Application Setting</string>
+    <string name="printerSetting_page">Printer Setting</string>
+    <string name="cans_in_market">Cans In Market</string>
+    <string name="cans_expected_today">Cans Expected Today</string>
+    <string name="customer_account_statement">Customer Account Statement</string>
+    <string name="sales">Sales</string>
+
+    <!--widget names-->
+    <string name="product_name_spelling">Product Name</string>
+    <string name="product_desc_spelling">Product Description</string>
+    <string name="price_spelling">Price</string>
+    <string name="customer_name_spelling">Customer Name</string>
+    <string name="address_spelling">Address</string>
+    <string name="mobile_spelling">Mobile No.</string>
+    <string name="cans_with_customer">Cans With Customer</string>
+    <string name="balance">Balance</string>
+    <string name="total">Total</string>
+    <string name="deposit_given">Deposit Given</string>
+    <string name="deposit_refund">Deposit Refund</string>
+    <string name="quantity_spelling">Quantity</string>
+    <string name="issue_date_spelling">Issue Date</string>
+    <string name="date_spelling">Date</string>
+    <string name="credit_spelling">Credit</string>
+    <string name="debit_spelling">Debit</string>
+    <string name="total_outstanding">Total Outstanding</string>
+    <string name="print_spelling">Print</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="total_cans_sold">Total Cans Sold</string>
+    <string name="number_of_cans">No. of Cans Sold</string>
+    <string name="order_date_spelling">Order Date</string>
+    <!--warning msg-->
+    <string name="cannot_be_empty">Cannot be empty</string>
+    <string name="yes_Spelling">Yes</string>
+    <string name="no_Spelling">No</string>
+    <string name="invalid_user">Invalid username/password </string>
+    <string name="toastAtLeastOneCustomerShouldbeSelected">At least one Customer should be selected</string>
+    <string name="CheckYourInternetConnection">Check Your Internet Connection</string>
+    <string name="customerNotFound">Customer Not Found</string>
+    <string name="new_Cans_should_be_grater_then_Cans_Return">New Cans should be grater then Cans Return!</string>
+    <string name="mobile_number_length">Mobile number cannot be less then 10!</string>
+    <string name="mobile_number_already_exist">Mobile number already exist!</string>
+    <string name="no_cust_found">No Customer match your search!</string>
+    <!--shared pref-->
+    <string name="LoginSpelling">Login</string>
+    <string name="UserId_Spelling">UserName</string>
+    <string name="isLogedIn_Spelling">isLogIn</string>
+    <string name="isSignup_Spelling">isSignup</string>
+    <!--missllenous names-->
+    <string name="loginSucess">Welcome to Water Supplier!</string>
+    <string name="saved_sucess">Saved Successful</string>
+    <string name="updated_sucess">Updated Successful</string>
+    <string name="updateSpelling">Update</string>
+    <string name="customerName_mobileNoHint">Customer Name/Mobile No.</string>
+    <string name="selectedOperationSpelling">Selected Operation</string>
+    <string name="parcelableValueSpelling">Parcelable Value</string>
+
+    <string name="filters">FILTERS</string>
+    <string name="edit">EDIT</string>
+
+    <string name="lbl_brightness">BRIGHTNESS</string>
+    <string name="lbl_contrast">CONTRAST</string>
+    <string name="lbl_saturation">SATURATION</string>
+    <string name="tab_filters">FILTERS</string>
+    <string name="tab_edit">EDIT</string>
+
+
+    <string name="roboto_medium">sans-serif-medium</string>
+    <string name="filter_normal">Normal</string>
+    <string name="action_save">SAVE</string>
+    <string name="action_open">OPEN</string>
+
+    <string name="facebook_appid">381727248974878</string>
+</resources>
