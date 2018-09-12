@@ -827,8 +827,8 @@ public class Manage_Orders_Activity extends Common_ActionBar_Abstract implements
                 databaseReference.push().setValue(orders_pojo);
                 Toast.makeText(Manage_Orders_Activity.this, getResources().getString(R.string.saved_sucess), Toast.LENGTH_SHORT).show();
                 send_SMS();
-                Intent intent = new Intent(Manage_Orders_Activity.this, Order_Search_ListActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Manage_Orders_Activity.this, Order_Search_ListActivity.class);
+//                startActivity(intent);
                 finish();
             }
         });

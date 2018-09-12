@@ -76,7 +76,7 @@ public class Customer_Account_SearchActivity extends Common_ActionBar_Abstract i
     private View view;
     private Dialog selectStudentDialog, AddStudentDialog;
     private ListView cust_listView;
-    private TextView customer_name,address,mobile;
+    private TextView customer_name,address,mobile, empty_text;
 
     //Non UI variables
     private FirebaseDatabase database;
@@ -116,10 +116,11 @@ public class Customer_Account_SearchActivity extends Common_ActionBar_Abstract i
         LayoutInflater layoutInflater = LayoutInflater.from(Customer_Account_SearchActivity.this);
         view = layoutInflater.inflate(R.layout.customer_search_dialog, null);
         selectStudentDialog = new Dialog(Customer_Account_SearchActivity.this, android.R.style.Theme_DeviceDefault_Dialog_NoActionBar);
+
 //        selectStudentDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
 
-        selectStudentDialog.setCancelable(true);
+        selectStudentDialog.setCancelable(false);
         selectStudentDialog.setContentView(view);
         selectStudentDialog.getWindow().getAttributes().windowAnimations = R.anim.intent_in_slide_out_left; //style id
 
@@ -137,7 +138,7 @@ public class Customer_Account_SearchActivity extends Common_ActionBar_Abstract i
         customer_pojoArrayList = new ArrayList<Customer_POJO>();
         height = getResources().getDisplayMetrics().heightPixels;
         width = getResources().getDisplayMetrics().widthPixels;
-
+         empty_text = findViewById(R.id.empty_text);
         customer_name.setWidth((int) (width/3.8));
         address.setWidth((int) (width/3.2));
         mobile.setWidth((int) (width/2));
@@ -167,9 +168,13 @@ public class Customer_Account_SearchActivity extends Common_ActionBar_Abstract i
                     cust_listView.setAdapter(customer_listAdapter);
                     customer_listAdapter.notifyDataSetChanged();
 
+
                 }
                 if(customer_listAdapter!=null){
                     customer_listAdapter.getFilter().filter(s.toString());
+                }
+                else {
+                    empty_text.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -191,6 +196,9 @@ public class Customer_Account_SearchActivity extends Common_ActionBar_Abstract i
                         customer_pojoArrayList.add(pojo);
 //                        Log.d(TAG,"Aman Chk DATA =="+dataSnapshot);
 
+                        customer_listAdapter = new Customer_ListAdapter(Customer_Account_SearchActivity.this, Customer_Account_SearchActivity.this, customer_pojoArrayList);
+                        cust_listView.setAdapter(customer_listAdapter);
+                        customer_listAdapter.notifyDataSetChanged();
 
                     }
                 }
@@ -202,9 +210,7 @@ public class Customer_Account_SearchActivity extends Common_ActionBar_Abstract i
 
             }
         });
-        customer_listAdapter = new Customer_ListAdapter(Customer_Account_SearchActivity.this, Customer_Account_SearchActivity.this, customer_pojoArrayList);
-        cust_listView.setAdapter(customer_listAdapter);
-        customer_listAdapter.notifyDataSetChanged();
+
     }
 
     @Override
@@ -291,6 +297,7 @@ public class Customer_Account_SearchActivity extends Common_ActionBar_Abstract i
         orders_pojosAL = new ArrayList<Orders_POJO>();
         dateAl = new ArrayList<>();
         dateAL2 = new ArrayList<>();
+
 
     }
 

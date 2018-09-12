@@ -90,7 +90,7 @@ public class FiltersMainActivity extends Common_ActionBar_Abstract implements Fi
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setTitle(getString(R.string.activity_title_main));
 
-        loadImage();
+//        loadImage();
 
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
