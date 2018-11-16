@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
 
 import watersupplier.main.Main.Common_ActionBar_Abstract;
 import watersupplier.main.Firsebase_Operations.FirebaseInstance;
@@ -100,8 +101,12 @@ public class Login_Activity extends Common_ActionBar_Abstract implements View.On
          * below statement to keeping data sync for OFFLINE FIREBASE implimentation
          * Data Limit = 10 mb ( used least recently)
          * Location = FireBase Cache
-         *
          * */
+//        PhoneAuthProvider.getInstance().verifyPhoneNumber( +917718049411,        // Phone number to verify
+//                60,                 // Timeout duration
+//                TimeUnit.SECONDS,   // Unit of timeout
+//                this,               // Activity (for callback binding)
+//                this);
         databaseReference.keepSynced(true);
         signup_text = (TextView) findViewById(R.id.signup_text);
         user_id = (EditText) findViewById(R.id.user_id);
@@ -170,9 +175,12 @@ public class Login_Activity extends Common_ActionBar_Abstract implements View.On
             case R.id.signin_btn:
                 if (user_id.getText().toString().isEmpty()){
                     user_id.setError("Please enter Username");
+                    user_id.requestFocus();
                 }
                else if (password.getText().toString().isEmpty()){
                 password.setError("Please enter Password");
+                password.requestFocus();
+
             }
 
                 else{

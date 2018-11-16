@@ -11,6 +11,7 @@ import android.widget.Button;
 import watersupplier.main.Configuration.Configuration_Main_Activity;
 import watersupplier.main.Main.Common_ActionBar_Abstract;
 import watersupplier.main.Main.First_Menu;
+import watersupplier.main.NewThings.FirebaseOTP.OTPLoginActivity;
 import watersupplier.main.NewThings.InstagramFilters.FiltersListFragment;
 import watersupplier.main.NewThings.InstagramFilters.FiltersMainActivity;
 import watersupplier.main.R;
@@ -39,6 +40,7 @@ public class NewThingsButtonsActivity extends Common_ActionBar_Abstract implemen
 
     private void generateEvents() {
         button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
     }
 
     @Override
@@ -73,6 +75,12 @@ public class NewThingsButtonsActivity extends Common_ActionBar_Abstract implemen
 
                 Intent intent = new Intent(this,FiltersMainActivity.class);
                 startActivity(intent);
+                AppUtills.giveIntentEffect(this);
+                break;
+
+            case R.id.button2:
+                Intent intent2 = new Intent(this,OTPLoginActivity.class);
+                startActivity(intent2);
                 AppUtills.giveIntentEffect(this);
                 break;
         }

@@ -143,7 +143,7 @@
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_appid" />
+            android:value="@string/facebook_appid"/>
 
         <provider android:authorities="com.facebook.app.FacebookContentProvider381727248974878"
             android:name="com.facebook.FacebookContentProvider"
@@ -212,6 +212,9 @@
         <activity android:name=".Configuration.Android_Plot_Activity"
             android:screenOrientation="landscape"/>
         <activity android:name=".NewThings.InstagramFilters.FiltersMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NewThings.FirebaseOTP.OTPLoginActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|adjustResize"
             android:screenOrientation="portrait"/>
 
     </application>
